@@ -7,6 +7,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using calculatorApi.Models;
 
 namespace calculatorApi
 {
@@ -22,6 +23,10 @@ namespace calculatorApi
             var x = Double.Parse(req.Query["x"]);
             var y = Double.Parse(req.Query["y"]);
             var result = x + y;
+
+            var operation = new Operation { X = x, Y = y, Result = result };
+            var qSender = new QueueSender();
+            await qSender.Enqueue(operation);
 
             return new OkObjectResult(result);
         }
