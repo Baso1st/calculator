@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace calculator
+namespace calculatorApi
 {
     public static class SumTwoNumbers
     {
