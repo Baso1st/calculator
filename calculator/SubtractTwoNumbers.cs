@@ -10,9 +10,9 @@ using Newtonsoft.Json;
 
 namespace calculator
 {
-    public static class SumTwoNumbers
+    public static class SubtractTwoNumbers
     {
-        [FunctionName("SumTwoNumbers")]
+        [FunctionName("SubtractTwoNumbers")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
             ILogger log)
@@ -21,7 +21,7 @@ namespace calculator
 
             var x = Double.Parse(req.Query["x"]);
             var y = Double.Parse(req.Query["y"]);
-            var result = x + y;
+            var result = x - y;
 
             return new OkObjectResult(result);
         }
