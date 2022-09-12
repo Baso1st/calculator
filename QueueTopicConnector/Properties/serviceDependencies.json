@@ -12,7 +12,7 @@
     },
     "storage2": {
       "type": "storage",
-      "connectionId": "Endpoint=sb:::calculator-service-bus.servicebus.windows.net:;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=WvbPtxguSIiv2VRb5G9009dfkrlQHD8JXGwjuGZN59g=",
+      "connectionId": "my-second-connection-string",
       "dynamicId": null
     }
   }

@@ -2,7 +2,7 @@
   "profiles": {
     "QueueTopicConnector": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7058",
+      "commandLineArgs": "--port 7201",
       "launchBrowser": false
     }
   }

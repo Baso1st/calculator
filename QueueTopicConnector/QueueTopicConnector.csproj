@@ -2,10 +2,9 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <AzureFunctionsVersion>v4</AzureFunctionsVersion>
-    <UserSecretsId>aa9dd9fc-3100-41d9-ae24-277ccdc7249c</UserSecretsId>
+    <UserSecretsId>bd3da1f1-1b79-4eeb-8049-e8da9738708b</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.10.0" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.3.0" />
     <PackageReference Include="Azure.Storage.Files.Shares" Version="12.1.0" />
     <PackageReference Include="Azure.Storage.Queues" Version="12.2.0" />
@@ -22,9 +21,5 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\PublishProfiles\" />
-    <Folder Include="Properties\ServiceDependencies\" />
   </ItemGroup>
 </Project>
