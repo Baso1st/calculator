@@ -13,12 +13,11 @@ namespace calculatorApi
         readonly string _connectionString = "Endpoint=sb://calculator-service-bus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=WvbPtxguSIiv2VRb5G9009dfkrlQHD8JXGwjuGZN59g=";
         readonly string _topicName = "multi-storage";
         
-        public async Task Enqueue(object message)
+        public async Task Enqueue(string message)
         {
             await using var client = new ServiceBusClient(_connectionString);
             await using var sender = client.CreateSender(_topicName);
-            var jObject = JsonSerializer.Serialize(message);
-            var serviceBusMessage = new ServiceBusMessage(jObject);
+            var serviceBusMessage = new ServiceBusMessage(message);
             await sender.SendMessageAsync(serviceBusMessage);
         }
 
