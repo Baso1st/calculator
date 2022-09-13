@@ -10,7 +10,7 @@ namespace calculatorApi
 {
     internal class TopicSender
     {
-        readonly string _connectionString = Environment.GetEnvironmentVariable("connection_string");
+        readonly string _connectionString = Environment.GetEnvironmentVariable("service_bus_connection");
         readonly string _topicName = "multi-storage";
         
         public async Task Enqueue(string message)
