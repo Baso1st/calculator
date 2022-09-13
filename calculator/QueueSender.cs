@@ -7,7 +7,7 @@ namespace calculatorApi
 {
     internal class QueueSender
     {
-        readonly string _connectionString = Environment.GetEnvironmentVariable("connection_string");
+        readonly string _connectionString = Environment.GetEnvironmentVariable("service_bus_connection");
         readonly string _queueName = "operation";
         
         public async Task Enqueue(object message)
