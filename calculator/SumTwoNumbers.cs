@@ -22,7 +22,7 @@ namespace calculatorApi
             var y = Double.Parse(req.Query["y"]);
             var result = x + y;
 
-            var operation = new Equation { X = x, Y = y, Operation = Operation.Subtraction, Result = result };
+            var operation = new Equation { X = x, Y = y, Operation = Operation.Summition, Result = result };
             var qSender = new QueueSender();
             await qSender.Enqueue(operation);
 
