@@ -19,7 +19,7 @@ namespace DataStorageAPI
         }
 
         [FunctionName("ReadTopicWriteCosmos")]
-        public async Task Run([ServiceBusTrigger("multi-storage", "cosmos", Connection = "connection-string")]string mySbMsg)
+        public async Task Run([ServiceBusTrigger("multi-storage", "cosmos", Connection = "connection_string")]string mySbMsg)
         {
             _logger.LogInformation($"C# ServiceBus topic trigger function processed message: {mySbMsg}");
             //Console.WriteLine($"C# ServiceBus topic trigger function processed message: {mySbMsg}");
@@ -29,7 +29,7 @@ namespace DataStorageAPI
         private async Task AddMessageToCosmosAsync(string mySbMsg)
         {
             var cosmosUrl = "https://calculator-cosmos.documents.azure.com:443/";
-            var cosmosKey = "vUN3Gaxlal69T8MHkvyf3eUxeMqE8nJIVERLU3c7USWl7gC1AJAgHwVDRMwDB42Uw0kJxPwb77Iznp3pqsJmkQ==";
+            var cosmosKey = Environment.GetEnvironmentVariable("cosmos-key");
             var dbName = "Calculator";
             var client = new CosmosClient(cosmosUrl, cosmosKey);
             var database = client.GetDatabase(dbName);

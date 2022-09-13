@@ -10,7 +10,7 @@ namespace calculatorApi
 {
     internal class TopicSender
     {
-        readonly string _connectionString = "Endpoint=sb://calculator-service-bus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=WvbPtxguSIiv2VRb5G9009dfkrlQHD8JXGwjuGZN59g=";
+        readonly string _connectionString = Environment.GetEnvironmentVariable("connection_string");
         readonly string _topicName = "multi-storage";
         
         public async Task Enqueue(string message)
