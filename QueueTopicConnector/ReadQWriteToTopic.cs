@@ -10,7 +10,7 @@ namespace QueueTopicConnector
     public class ReadQWriteToTopic
     {
         [FunctionName("ReadQWriteToTopic")]
-        public async Task RunAsync([ServiceBusTrigger("operation", Connection = "connection-string")]string myQueueItem, ILogger log)
+        public async Task RunAsync([ServiceBusTrigger("operation", Connection = "connection_string")]string myQueueItem, ILogger log)
         {
             log.LogInformation($"C# ServiceBus queue trigger function processed message: {myQueueItem}");
             var topicSender = new TopicSender();
