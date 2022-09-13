@@ -19,7 +19,7 @@ namespace DataStorageAPI
         }
 
         [FunctionName("ReadTopicWriteCosmos")]
-        public async Task Run([ServiceBusTrigger("multi-storage", "cosmos", Connection = "connection_string")]string mySbMsg)
+        public async Task Run([ServiceBusTrigger("multi-storage", "cosmos", Connection = "service_bus_connection")]string mySbMsg)
         {
             _logger.LogInformation($"C# ServiceBus topic trigger function processed message: {mySbMsg}");
             //Console.WriteLine($"C# ServiceBus topic trigger function processed message: {mySbMsg}");

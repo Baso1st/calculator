@@ -12,11 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorApi.Test", "calculatorApi.Test\CalculatorApi.Test.csproj", "{7F247F07-CE68-4781-A265-41861D1A7FA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueTopicConnector", "QueueTopicConnector\QueueTopicConnector.csproj", "{D503E8FB-CD2F-4F88-8A32-14AEE76A5834}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueTopicConnector", "QueueTopicConnector\QueueTopicConnector.csproj", "{D503E8FB-CD2F-4F88-8A32-14AEE76A5834}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStorageAPI", "DataStorageAPI\DataStorageAPI.csproj", "{87F719CD-D159-4602-ABC0-7E4663955122}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStorageAPI", "DataStorageAPI\DataStorageAPI.csproj", "{87F719CD-D159-4602-ABC0-7E4663955122}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{AC4E9CB7-40C8-4CAE-B834-4D1B61B9242B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{AC4E9CB7-40C8-4CAE-B834-4D1B61B9242B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
