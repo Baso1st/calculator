@@ -28,7 +28,7 @@ namespace DataStorageAPI
         private async Task AddMessageToBlobAsync(string mySbMsg)
         {
             var equation = JsonSerializer.Deserialize<Equation>(mySbMsg);
-            var connectionString = Environment.GetEnvironmentVariable("blob_connection");
+            var connectionString = Environment.GetEnvironmentVariable("storage_connection");
             var client = new BlobClient(connectionString, "equation", $"{equation.id}.json");
             using var memoryStream = new MemoryStream();
             var writer = new StreamWriter(memoryStream);

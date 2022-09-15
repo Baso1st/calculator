@@ -22,14 +22,13 @@ namespace DataStorageAPI
         public async Task Run([ServiceBusTrigger("multi-storage", "cosmos", Connection = "service_bus_connection")]string mySbMsg)
         {
             _logger.LogInformation($"C# ServiceBus topic trigger function processed message: {mySbMsg}");
-            //Console.WriteLine($"C# ServiceBus topic trigger function processed message: {mySbMsg}");
             await AddMessageToCosmosAsync(mySbMsg);
         }
 
         private async Task AddMessageToCosmosAsync(string mySbMsg)
         {
             var cosmosUrl = "https://calculator-cosmos.documents.azure.com:443/";
-            var cosmosKey = Environment.GetEnvironmentVariable("cosmos-key");
+            var cosmosKey = Environment.GetEnvironmentVariable("cosmos_key");
             var dbName = "Calculator";
             var client = new CosmosClient(cosmosUrl, cosmosKey);
             var database = client.GetDatabase(dbName);
